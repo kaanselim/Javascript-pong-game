@@ -379,6 +379,9 @@ function checkGameMode(){
        else if(this.id == "reloadGame"){
         reload();
         CONSTS.gameMode = window.localStorage.getItem("gameMode");
+        if(!window.localStorage.getItem("gameMode")){
+            CONSTS.gameMode = "normalgame";
+        }
         CONSTS.load = true;
         start();
        }
